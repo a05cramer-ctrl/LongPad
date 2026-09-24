@@ -1,4 +1,4 @@
-window.LONG_CFG = {
+window.PERPER_CFG = {
   CA: "",
   PAD: "pumpfun",
   X: "https://x.com/",

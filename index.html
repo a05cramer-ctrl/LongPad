@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>LongPad</title>
-<meta name="description" content="LongPad — perpetuals for memecoins. Long any coin on the pad up to 20x. Liquidations buy $LONG.">
-<meta property="og:title" content="LongPad — long any memecoin up to 20x">
-<meta property="og:description" content="Perpetuals for memecoins. Liquidations buy $LONG.">
+<title>Perper</title>
+<meta name="description" content="Perper — perpetuals for memecoins. Long any coin on the pad up to 20x. Liquidations buy $PERPER.">
+<meta property="og:title" content="Perper — long any memecoin up to 20x">
+<meta property="og:description" content="Perpetuals for memecoins. Liquidations buy $PERPER.">
 <meta property="og:image" content="og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.png">
@@ -253,16 +253,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="LongPad home"><span class="mk"><img src="mark.png" alt=""></span>LongPad</a>
-    <nav class="links" aria-label="Sections"><a href="#mechanism">Mechanism</a><a href="#math">The math</a><a href="#risk">Risk engine</a><a href="#long">$LONG</a><a href="#faq">FAQ</a></nav>
+    <a class="logo" href="#top" aria-label="Perper home"><span class="mk"><img src="mark.png" alt=""></span>Perper</a>
+    <nav class="links" aria-label="Sections"><a href="#mechanism">Mechanism</a><a href="#math">The math</a><a href="#risk">Risk engine</a><a href="#long">$PERPER</a><a href="#faq">FAQ</a></nav>
     <span class="sp"></span>
     <a class="btn sm ghost" id="navX" href="#" target="_blank" rel="noopener">X</a>
-    <a class="btn sm pri" id="navBuy" href="#" target="_blank" rel="noopener">Buy $LONG</a>
+    <a class="btn sm pri" id="navBuy" href="#" target="_blank" rel="noopener">Buy $PERPER</a>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero" aria-label="LongPad">
+  <section class="hero" aria-label="Perper">
     <canvas id="hero3d" aria-hidden="true"></canvas>
     <div class="shade" aria-hidden="true"></div>
     <div id="lbls" aria-hidden="true"></div>
@@ -270,9 +270,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div>
         <span class="eyebrow">Perpetuals for memecoins</span>
         <h1>Long any memecoin.<br><span class="acc">Up to 20x.</span></h1>
-        <p class="lead">LongPad opens a perpetual market for every coin on the pad that clears the liquidity bar. Post SOL, pick your leverage, ride the candle. Every liquidation buys $LONG.</p>
-        <div class="cta"><a class="btn pri" id="heroBuy" href="#" target="_blank" rel="noopener">Buy $LONG</a><a class="btn" href="#mechanism">How it works</a></div>
-        <div class="meta"><div><b>20x</b>max leverage</div><div><b>15 min</b>TWAP oracle</div><div><b>30%</b>of fees buy $LONG</div></div>
+        <p class="lead">Perper opens a perpetual market for every coin on the pad that clears the liquidity bar. Post SOL, pick your leverage, ride the candle. Every liquidation buys $PERPER.</p>
+        <div class="cta"><a class="btn pri" id="heroBuy" href="#" target="_blank" rel="noopener">Buy $PERPER</a><a class="btn" href="#mechanism">How it works</a></div>
+        <div class="meta"><div><b>20x</b>max leverage</div><div><b>15 min</b>TWAP oracle</div><div><b>30%</b>of fees buy $PERPER</div></div>
       </div>
       <div class="glass ticket" id="ticket">
         <div class="hd"><span class="tag live">Position preview</span><span class="tag">Simulated</span></div>
@@ -301,17 +301,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div></div>
 
   <section id="mechanism"><div class="wrap">
-    <div class="sec-hd reveal"><span class="eyebrow">Mechanism</span><h2>How a long works on LongPad.</h2><p class="lead">Memecoins have spot and nothing else. LongPad adds the missing leg: an isolated-margin perpetual for every coin with enough liquidity to price it safely.</p></div>
+    <div class="sec-hd reveal"><span class="eyebrow">Mechanism</span><h2>How a long works on Perper.</h2><p class="lead">Memecoins have spot and nothing else. Perper adds the missing leg: an isolated-margin perpetual for every coin with enough liquidity to price it safely.</p></div>
     <div class="mech">
       <div class="steps" id="steps">
         <div class="step reveal" data-n="0"><h3>Pick a coin</h3><p>Any coin on the pad whose pool clears the listing bar gets a perp market automatically. Its tier sets the max leverage.</p></div>
         <div class="step reveal" data-n="1"><h3>Post SOL, choose 2x–20x</h3><p>Your collateral sits in an isolated margin vault. Position size is collateral × leverage. Nothing else of yours is at risk.</p></div>
         <div class="step reveal" data-n="2"><h3>The engine marks you to the oracle</h3><p>PnL is marked against a 15-minute TWAP from the coin's own pool, so one wick can't liquidate you. The LP vault takes the other side.</p></div>
-        <div class="step reveal" data-n="3"><h3>Close — or get liquidated</h3><p>Close any time at the oracle price. If equity falls to the 2.5% maintenance margin, keepers liquidate: the insurance fund and $LONG buyback get paid.</p></div>
+        <div class="step reveal" data-n="3"><h3>Close — or get liquidated</h3><p>Close any time at the oracle price. If equity falls to the 2.5% maintenance margin, keepers liquidate: the insurance fund and $PERPER buyback get paid.</p></div>
       </div>
       <div class="glass diagram reveal">
         <div class="dhd"><span class="tag">System</span><span class="fine">flows animate live</span></div>
-        <svg viewBox="0 0 640 520" role="img" aria-label="Diagram: trader collateral flows into the margin vault and perp engine; the oracle prices positions from the coin's pool; the LP vault is the counterparty; liquidations flow to the insurance fund and the $LONG buyback.">
+        <svg viewBox="0 0 640 520" role="img" aria-label="Diagram: trader collateral flows into the margin vault and perp engine; the oracle prices positions from the coin's pool; the LP vault is the counterparty; liquidations flow to the insurance fund and the $PERPER buyback.">
           <path class="edge" id="e1" d="M120 92 H 250"/><path class="flow" d="M120 92 H 250"/>
           <path class="edge" d="M380 92 H 510"/><path class="flow slow" d="M380 92 H 510"/>
           <path class="edge" d="M315 122 V 220"/><path class="flow" d="M315 122 V 220"/>
@@ -328,7 +328,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <g class="node"><rect x="40" y="330" width="160" height="60" rx="12"/><text x="56" y="357">LP vault</text><text class="sub" x="56" y="375">counterparty · earns fees</text></g>
           <g class="node"><rect x="240" y="360" width="150" height="60" rx="12"/><text x="256" y="387">Keepers</text><text class="sub" x="256" y="405">liquidate at 2.5% MM</text></g>
           <g class="node"><rect x="80" y="460" width="160" height="56" rx="12"/><text x="96" y="485">Insurance fund</text><text class="sub" x="96" y="502">covers bad debt</text></g>
-          <g class="node hot"><rect x="390" y="460" width="160" height="56" rx="12"/><text x="406" y="485">$LONG buyback</text><text class="sub" x="406" y="502">market buys on every liq</text></g>
+          <g class="node hot"><rect x="390" y="460" width="160" height="56" rx="12"/><text x="406" y="485">$PERPER buyback</text><text class="sub" x="406" y="502">market buys on every liq</text></g>
         </svg>
       </div>
     </div>
@@ -360,7 +360,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div></section>
 
   <section id="risk"><div class="wrap">
-    <div class="sec-hd reveal"><span class="eyebrow">Risk engine</span><h2>Leverage is earned by liquidity.</h2><p class="lead">A thin pool can't carry a 20x market. LongPad sizes every market to the pool behind it, and tightens automatically as liquidity moves.</p></div>
+    <div class="sec-hd reveal"><span class="eyebrow">Risk engine</span><h2>Leverage is earned by liquidity.</h2><p class="lead">A thin pool can't carry a 20x market. Perper sizes every market to the pool behind it, and tightens automatically as liquidity moves.</p></div>
     <div class="glass tblwrap reveal">
       <table class="tbl">
         <thead><tr><th>Pool depth</th><th>Max leverage</th><th>Open-interest cap</th><th>Status</th></tr></thead>
@@ -382,18 +382,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section id="long"><div class="wrap tok">
     <div>
-      <div class="sec-hd reveal" style="margin-bottom:36px"><span class="eyebrow">$LONG</span><h2>Every trade feeds the token.</h2><p class="lead">$LONG is the pad's own coin. It doesn't vote on parameters or promise yield. It gets bought: out of trading fees and out of every liquidation, on the open market.</p></div>
+      <div class="sec-hd reveal" style="margin-bottom:36px"><span class="eyebrow">$PERPER</span><h2>Every trade feeds the token.</h2><p class="lead">$PERPER is the pad's own coin. It doesn't vote on parameters or promise yield. It gets bought: out of trading fees and out of every liquidation, on the open market.</p></div>
       <div class="split reveal">
-        <div class="bar" aria-label="Trading fee split"><div class="a" style="width:30%">30% $LONG</div><div class="b" style="width:50%">50% LP vault</div><div class="c" style="width:20%">20% insurance</div></div>
+        <div class="bar" aria-label="Trading fee split"><div class="a" style="width:30%">30% $PERPER</div><div class="b" style="width:50%">50% LP vault</div><div class="c" style="width:20%">20% fund</div></div>
         <div class="legend">
-          <div><i style="background:var(--acc)"></i><span><b>30% of trading fees</b> market-buy $LONG.</span></div>
+          <div><i style="background:var(--acc)"></i><span><b>30% of trading fees</b> market-buy $PERPER.</span></div>
           <div><i style="background:#2d4a31"></i><span><b>50%</b> pays the LP vault for taking the other side.</span></div>
           <div><i style="background:#2a2f35"></i><span><b>20%</b> tops up the insurance fund.</span></div>
-          <div><i style="background:var(--down)"></i><span><b>Liquidation fee (1%)</b> splits 50/50 between the $LONG buyback and the insurance fund.</span></div>
+          <div><i style="background:var(--down)"></i><span><b>Liquidation fee (1%)</b> splits 50/50 between the $PERPER buyback and the insurance fund.</span></div>
         </div>
       </div>
     </div>
-    <div class="orb reveal"><span class="ring"></span><span class="ring b"></span><img src="mark.png" alt="LongPad mark"></div>
+    <div class="orb reveal"><span class="ring"></span><span class="ring b"></span><img src="mark.png" alt="Perper mark"></div>
   </div></section>
 
   <section id="faq"><div class="wrap">
@@ -403,19 +403,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <details><summary>Who is on the other side of my long?</summary><p>The LP vault. Liquidity providers deposit SOL, take the opposite side of net open interest, and earn 50% of trading fees plus funding.</p></details>
       <details><summary>What price am I marked at?</summary><p>A 15-minute TWAP from the coin's own pool, checked against the live price. One big wick won't liquidate you; a real trend will.</p></details>
       <details><summary>What can I lose?</summary><p>Your collateral on that position and nothing more. Margin is isolated, so one position can't drain another.</p></details>
-      <details><summary>Can I short?</summary><p>It's called LongPad. Longs only.</p></details>
+      <details><summary>Can I short?</summary><p>No. Perper is longs only. The LP vault is the other side of every position.</p></details>
     </div>
   </div></section>
 
   <section class="final"><div class="wrap">
-    <span class="eyebrow">$LONG</span>
+    <span class="eyebrow">$PERPER</span>
     <h2 style="margin-top:16px">Leverage for everything<br>that trades.</h2>
-    <p class="lead">Liquidations buy $LONG. Fees buy $LONG. You can too.</p>
+    <p class="lead">Liquidations buy $PERPER. Fees buy $PERPER. You can too.</p>
     <div class="ca"><span>CA</span><code id="caTxt">dropping soon</code><button type="button" id="caCopy">Copy</button></div>
-    <div class="cta"><a class="btn pri" id="finBuy" href="#" target="_blank" rel="noopener">Buy $LONG</a><a class="btn" id="finChart" href="#" target="_blank" rel="noopener">Chart</a><a class="btn" id="finX" href="#" target="_blank" rel="noopener">X</a></div>
+    <div class="cta"><a class="btn pri" id="finBuy" href="#" target="_blank" rel="noopener">Buy $PERPER</a><a class="btn" id="finChart" href="#" target="_blank" rel="noopener">Chart</a><a class="btn" id="finX" href="#" target="_blank" rel="noopener">X</a></div>
   </div></section>
 </main>
-<footer><div class="wrap"><span>LongPad · $LONG</span><span>Leverage cuts both ways. Isolated margin: you can lose your whole collateral.</span></div></footer>
+<footer><div class="wrap"><span>Perper · $PERPER</span><span>Leverage cuts both ways. Isolated margin: you can lose your whole collateral.</span></div></footer>
 <div id="toast" role="status"></div>
 
 <script src="config.js"></script>
@@ -4270,7 +4270,7 @@ void main() {
 
 			#endif
 
-		}`};var sr=class extends Ue{constructor(){super();let t=sc;this.uniforms=bn.clone(t.uniforms),this.material=new Ys({name:t.name,uniforms:this.uniforms,vertexShader:t.vertexShader,fragmentShader:t.fragmentShader}),this.fsQuad=new En(this.material),this._outputColorSpace=null,this._toneMapping=null}render(t,e,n){this.uniforms.tDiffuse.value=n.texture,this.uniforms.toneMappingExposure.value=t.toneMappingExposure,(this._outputColorSpace!==t.outputColorSpace||this._toneMapping!==t.toneMapping)&&(this._outputColorSpace=t.outputColorSpace,this._toneMapping=t.toneMapping,this.material.defines={},Xt.getTransfer(this._outputColorSpace)===Yt&&(this.material.defines.SRGB_TRANSFER=""),this._toneMapping===Ba?this.material.defines.LINEAR_TONE_MAPPING="":this._toneMapping===za?this.material.defines.REINHARD_TONE_MAPPING="":this._toneMapping===Va?this.material.defines.CINEON_TONE_MAPPING="":this._toneMapping===Ha?this.material.defines.ACES_FILMIC_TONE_MAPPING="":this._toneMapping===ka&&(this.material.defines.AGX_TONE_MAPPING=""),this.material.needsUpdate=!0),this.renderToScreen===!0?(t.setRenderTarget(null),this.fsQuad.render(t)):(t.setRenderTarget(e),this.clear&&t.clear(t.autoClearColor,t.autoClearDepth,t.autoClearStencil),this.fsQuad.render(t))}dispose(){this.material.dispose(),this.fsQuad.dispose()}};var lr=Object.assign({CA:"",PAD:"pumpfun",X:"https://x.com/",BUY:"",CHART:""},window.LONG_CFG||{}),Vt=i=>document.getElementById(i),Wi=String(lr.CA||"").trim(),cr=Wi.length>20,lc=lr.BUY||(cr?`https://pump.fun/coin/${Wi}`:"https://pump.fun"),wm=lr.CHART||(cr?`https://gmgn.ai/sol/token/${Wi}`:lc);["navBuy","heroBuy","finBuy"].forEach(i=>Vt(i).href=lc);Vt("finChart").href=wm;["navX","finX"].forEach(i=>Vt(i).href=lr.X||"https://x.com/");Vt("caTxt").textContent=cr?Wi:"dropping soon";var rc=0;function rr(i){let t=Vt("toast");t.textContent=i,t.classList.add("on"),clearTimeout(rc),rc=setTimeout(()=>t.classList.remove("on"),1800)}Vt("caCopy").addEventListener("click",()=>{if(!cr)return rr("CA drops at launch");let i=()=>{let t=document.createRange();t.selectNodeContents(Vt("caTxt"));let e=getSelection();e.removeAllRanges(),e.addRange(t)};try{navigator.clipboard.writeText(Wi).then(()=>rr("CA copied"),()=>{i(),rr("Selected \u2014 copy it")})}catch{i(),rr("Selected \u2014 copy it")}});document.querySelectorAll(".glass").forEach(i=>i.addEventListener("pointermove",t=>{let e=i.getBoundingClientRect();i.style.setProperty("--mx",`${t.clientX-e.left}px`),i.style.setProperty("--my",`${t.clientY-e.top}px`)}));var cc=new IntersectionObserver(i=>i.forEach(t=>{t.isIntersecting&&(t.target.classList.add("in"),cc.unobserve(t.target))}),{rootMargin:"0px 0px -8% 0px"});document.querySelectorAll(".reveal").forEach(i=>cc.observe(i));var ac=[...document.querySelectorAll(".step")],$a=0,oc=0;new IntersectionObserver(i=>i.forEach(t=>{clearInterval(oc),t.isIntersecting&&(oc=setInterval(()=>{ac.forEach((e,n)=>e.classList.toggle("on",n===$a)),$a=($a+1)%ac.length},1600))}),{threshold:.3}).observe(Vt("steps"));var Qa=.025,ja=.001,hc={L:10};function ar(i,t=2){return i.toLocaleString("en-US",{minimumFractionDigits:t,maximumFractionDigits:t})}function kn(i,t=1){return(i>=0?"+":"\u2212")+ar(Math.abs(i)*100,t)+"%"}function to(){let i=Math.max(.1,parseFloat(Vt("cCol").value)||.1),t=hc.L,e=parseFloat(Vt("cMove").value)/100,n=i*t,s=-(1/t-Qa),r=n*ja*(2+Math.max(e,s)),o=e<=s,a=o?0:Math.max(0,i+n*e-r),l=o?-1:(a-i)/i;Vt("cMoveOut").textContent=kn(e,1).replace(".0%","%"),Vt("cSize").textContent=`${ar(n,n<100?2:0)} SOL`,Vt("cLiq").textContent=kn(s,1),Vt("cEq").textContent=`${ar(a)} SOL`,Vt("cFee").textContent=`${ar(r)} SOL`,Vt("cPnl").textContent=o?"\u2212100%":kn(l,l>9.99?0:1),Vt("cPnl").style.color=o?"var(--down)":l>=0?"var(--acc)":"var(--ink)",Vt("cState").textContent=o?"LIQUIDATED":"OPEN",Vt("cState").classList.toggle("dead",o);let c=-.3,h=1,u=f=>(f-c)/(h-c)*100;Vt("cZone").style.width=`${Math.max(0,u(s))}%`,Vt("cEntry").style.left=`${u(0)}%`,Vt("cPx").style.left=`calc(${u(e)}% - 1.5px)`,Vt("cPx").style.background=o?"var(--down)":"var(--acc)",Vt("cMlLiq").style.left=`${Math.max(4,u(s))}%`,Vt("cMlEntry").style.left=`${u(0)}%`}Vt("cSeg").addEventListener("click",i=>{let t=i.target.closest("button");t&&(hc.L=+t.dataset.l,Vt("cSeg").querySelectorAll("button").forEach(e=>e.setAttribute("aria-pressed",e===t)),to())});["cCol","cMove"].forEach(i=>Vt(i).addEventListener("input",to));to();var Gi=.35,or={L:20};function uc(){let i=or.L;Vt("tSize").textContent=`${10*i} SOL`,Vt("tLiq").textContent=i===1?"no liquidation above \u221297.5%":`${kn(-(1/i-Qa),1)} move`,Vt("tMove").textContent=kn(Gi,1);let t=i*Gi-ja*i*(2+Gi);Vt("tPnl").textContent=kn(t,t>9.99?0:1)}uc();var Ka=Vt("hero3d"),ki=Ka.parentElement,Hn;try{Hn=new Ni({canvas:Ka,antialias:!0,powerPreference:"high-performance"})}catch{Ka.style.display="none"}if(Hn){let p=function(Y,st=0){let k=[];for(let bt=0;bt<r;bt+=2)k.push(new R(f(bt),Y(bt),m(bt)+st));return k.push(new R(f(r-1),Y(r-1),m(r-1)+st)),new Oi(k,!1,"centripetal")},$=function(Y){z=p(st=>u(Y*o[st])),P.geometry.dispose(),w.geometry.dispose(),P.geometry=new _i(z,g,.034,8),w.geometry=new _i(z,200,.11,8)},X=function(Y){let st=Z(Y),k=-3.9;H.scale.set(l-a+2,st-k,1),H.position.set((a+l)/2+.6,(st+k)/2,-.8),H.rotation.y=-Math.atan2(3.4,l-a)*.9},xt=function(){ct=z.getSpacedPoints(300)},Dt=function(Y,st,k=!0){qt.copy(st).project(e);let bt=ki.clientWidth,Ct=ki.clientHeight,_t=(qt.x*.5+.5)*bt,vt=(-qt.y*.5+.5)*Ct;Y.style.left=`${_t}px`,Y.style.top=`${vt}px`,Y.style.opacity=k&&qt.z<1&&_t>0&&_t<bt?1:0},S=function(){let Y=ki.clientWidth,st=ki.clientHeight;Hn.setSize(Y,st,!1),At.setSize(Y,st),Et.setSize(Y,st),e.aspect=Y/st,e.fov=Y/st<.9?52:34,e.updateProjectionMatrix()},Q=function(Y){W=A,M=Y,b=0,or.L=Y,uc(),St.textContent=Y===1?"Liquidation \xB7 1x":`Liquidation \xB7 ${Y}x`},i=Math.min(devicePixelRatio||1,1.75);Hn.setPixelRatio(i),Hn.toneMapping=Ke,Hn.outputColorSpace=re;let t=new Hs;t.background=new Nt(460810),t.fog=new Vs(460810,12,26);let e=new Ee(34,1,.1,60),n=7,s=()=>(n=n*16807%2147483647)/2147483647,r=240,o=new Float32Array(r);for(let Y=0;Y<r;Y++){let st=Y/(r-1),k=-.02*Math.exp(-Math.pow((st-.45)/.05,2)),bt=Math.min(1,Math.max(0,(st-.56)/.44)),Ct=Gi*Math.pow(bt*bt*(3-2*bt),1.15),_t=(Math.sin(st*38)*.011+Math.sin(st*91+1.3)*.006)*bt+(s()-.5)*.006*(.3+bt);o[Y]=k+Ct+_t*(st>.56?1:.35)}o[0]=0,o[r-1]=Gi;for(let Y=1;Y<12;Y++)o[Y]*=Y/12;let a=-7.6,l=6.2,c=-1.95,h=.92,u=Y=>c+Math.asinh(Y*3)*h,f=Y=>a+(l-a)*(Y/(r-1)),m=Y=>1.2-3.4*(Y/(r-1)),g=420,x=(Y,st)=>new ee({uniforms:{uCol:{value:new Nt(Y)},uReveal:{value:1},uTime:{value:0},uW:{value:st}},vertexShader:"varying vec2 vUv; varying vec3 vN; varying vec3 vV; void main(){ vUv=uv; vec4 mv=modelViewMatrix*vec4(position,1.); vN=normalize(normalMatrix*normal); vV=normalize(-mv.xyz); gl_Position=projectionMatrix*mv; }",fragmentShader:`uniform vec3 uCol; uniform float uReveal, uTime; varying vec2 vUv; varying vec3 vN; varying vec3 vV;
+		}`};var sr=class extends Ue{constructor(){super();let t=sc;this.uniforms=bn.clone(t.uniforms),this.material=new Ys({name:t.name,uniforms:this.uniforms,vertexShader:t.vertexShader,fragmentShader:t.fragmentShader}),this.fsQuad=new En(this.material),this._outputColorSpace=null,this._toneMapping=null}render(t,e,n){this.uniforms.tDiffuse.value=n.texture,this.uniforms.toneMappingExposure.value=t.toneMappingExposure,(this._outputColorSpace!==t.outputColorSpace||this._toneMapping!==t.toneMapping)&&(this._outputColorSpace=t.outputColorSpace,this._toneMapping=t.toneMapping,this.material.defines={},Xt.getTransfer(this._outputColorSpace)===Yt&&(this.material.defines.SRGB_TRANSFER=""),this._toneMapping===Ba?this.material.defines.LINEAR_TONE_MAPPING="":this._toneMapping===za?this.material.defines.REINHARD_TONE_MAPPING="":this._toneMapping===Va?this.material.defines.CINEON_TONE_MAPPING="":this._toneMapping===Ha?this.material.defines.ACES_FILMIC_TONE_MAPPING="":this._toneMapping===ka&&(this.material.defines.AGX_TONE_MAPPING=""),this.material.needsUpdate=!0),this.renderToScreen===!0?(t.setRenderTarget(null),this.fsQuad.render(t)):(t.setRenderTarget(e),this.clear&&t.clear(t.autoClearColor,t.autoClearDepth,t.autoClearStencil),this.fsQuad.render(t))}dispose(){this.material.dispose(),this.fsQuad.dispose()}};var lr=Object.assign({CA:"",PAD:"pumpfun",X:"https://x.com/",BUY:"",CHART:""},window.PERPER_CFG||{}),Vt=i=>document.getElementById(i),Wi=String(lr.CA||"").trim(),cr=Wi.length>20,lc=lr.BUY||(cr?`https://pump.fun/coin/${Wi}`:"https://pump.fun"),wm=lr.CHART||(cr?`https://gmgn.ai/sol/token/${Wi}`:lc);["navBuy","heroBuy","finBuy"].forEach(i=>Vt(i).href=lc);Vt("finChart").href=wm;["navX","finX"].forEach(i=>Vt(i).href=lr.X||"https://x.com/");Vt("caTxt").textContent=cr?Wi:"dropping soon";var rc=0;function rr(i){let t=Vt("toast");t.textContent=i,t.classList.add("on"),clearTimeout(rc),rc=setTimeout(()=>t.classList.remove("on"),1800)}Vt("caCopy").addEventListener("click",()=>{if(!cr)return rr("CA drops at launch");let i=()=>{let t=document.createRange();t.selectNodeContents(Vt("caTxt"));let e=getSelection();e.removeAllRanges(),e.addRange(t)};try{navigator.clipboard.writeText(Wi).then(()=>rr("CA copied"),()=>{i(),rr("Selected \u2014 copy it")})}catch{i(),rr("Selected \u2014 copy it")}});document.querySelectorAll(".glass").forEach(i=>i.addEventListener("pointermove",t=>{let e=i.getBoundingClientRect();i.style.setProperty("--mx",`${t.clientX-e.left}px`),i.style.setProperty("--my",`${t.clientY-e.top}px`)}));var cc=new IntersectionObserver(i=>i.forEach(t=>{t.isIntersecting&&(t.target.classList.add("in"),cc.unobserve(t.target))}),{rootMargin:"0px 0px -8% 0px"});document.querySelectorAll(".reveal").forEach(i=>cc.observe(i));var ac=[...document.querySelectorAll(".step")],$a=0,oc=0;new IntersectionObserver(i=>i.forEach(t=>{clearInterval(oc),t.isIntersecting&&(oc=setInterval(()=>{ac.forEach((e,n)=>e.classList.toggle("on",n===$a)),$a=($a+1)%ac.length},1600))}),{threshold:.3}).observe(Vt("steps"));var Qa=.025,ja=.001,hc={L:10};function ar(i,t=2){return i.toLocaleString("en-US",{minimumFractionDigits:t,maximumFractionDigits:t})}function kn(i,t=1){return(i>=0?"+":"\u2212")+ar(Math.abs(i)*100,t)+"%"}function to(){let i=Math.max(.1,parseFloat(Vt("cCol").value)||.1),t=hc.L,e=parseFloat(Vt("cMove").value)/100,n=i*t,s=-(1/t-Qa),r=n*ja*(2+Math.max(e,s)),o=e<=s,a=o?0:Math.max(0,i+n*e-r),l=o?-1:(a-i)/i;Vt("cMoveOut").textContent=kn(e,1).replace(".0%","%"),Vt("cSize").textContent=`${ar(n,n<100?2:0)} SOL`,Vt("cLiq").textContent=kn(s,1),Vt("cEq").textContent=`${ar(a)} SOL`,Vt("cFee").textContent=`${ar(r)} SOL`,Vt("cPnl").textContent=o?"\u2212100%":kn(l,l>9.99?0:1),Vt("cPnl").style.color=o?"var(--down)":l>=0?"var(--acc)":"var(--ink)",Vt("cState").textContent=o?"LIQUIDATED":"OPEN",Vt("cState").classList.toggle("dead",o);let c=-.3,h=1,u=f=>(f-c)/(h-c)*100;Vt("cZone").style.width=`${Math.max(0,u(s))}%`,Vt("cEntry").style.left=`${u(0)}%`,Vt("cPx").style.left=`calc(${u(e)}% - 1.5px)`,Vt("cPx").style.background=o?"var(--down)":"var(--acc)",Vt("cMlLiq").style.left=`${Math.max(4,u(s))}%`,Vt("cMlEntry").style.left=`${u(0)}%`}Vt("cSeg").addEventListener("click",i=>{let t=i.target.closest("button");t&&(hc.L=+t.dataset.l,Vt("cSeg").querySelectorAll("button").forEach(e=>e.setAttribute("aria-pressed",e===t)),to())});["cCol","cMove"].forEach(i=>Vt(i).addEventListener("input",to));to();var Gi=.35,or={L:20};function uc(){let i=or.L;Vt("tSize").textContent=`${10*i} SOL`,Vt("tLiq").textContent=i===1?"no liquidation above \u221297.5%":`${kn(-(1/i-Qa),1)} move`,Vt("tMove").textContent=kn(Gi,1);let t=i*Gi-ja*i*(2+Gi);Vt("tPnl").textContent=kn(t,t>9.99?0:1)}uc();var Ka=Vt("hero3d"),ki=Ka.parentElement,Hn;try{Hn=new Ni({canvas:Ka,antialias:!0,powerPreference:"high-performance"})}catch{Ka.style.display="none"}if(Hn){let p=function(Y,st=0){let k=[];for(let bt=0;bt<r;bt+=2)k.push(new R(f(bt),Y(bt),m(bt)+st));return k.push(new R(f(r-1),Y(r-1),m(r-1)+st)),new Oi(k,!1,"centripetal")},$=function(Y){z=p(st=>u(Y*o[st])),P.geometry.dispose(),w.geometry.dispose(),P.geometry=new _i(z,g,.034,8),w.geometry=new _i(z,200,.11,8)},X=function(Y){let st=Z(Y),k=-3.9;H.scale.set(l-a+2,st-k,1),H.position.set((a+l)/2+.6,(st+k)/2,-.8),H.rotation.y=-Math.atan2(3.4,l-a)*.9},xt=function(){ct=z.getSpacedPoints(300)},Dt=function(Y,st,k=!0){qt.copy(st).project(e);let bt=ki.clientWidth,Ct=ki.clientHeight,_t=(qt.x*.5+.5)*bt,vt=(-qt.y*.5+.5)*Ct;Y.style.left=`${_t}px`,Y.style.top=`${vt}px`,Y.style.opacity=k&&qt.z<1&&_t>0&&_t<bt?1:0},S=function(){let Y=ki.clientWidth,st=ki.clientHeight;Hn.setSize(Y,st,!1),At.setSize(Y,st),Et.setSize(Y,st),e.aspect=Y/st,e.fov=Y/st<.9?52:34,e.updateProjectionMatrix()},Q=function(Y){W=A,M=Y,b=0,or.L=Y,uc(),St.textContent=Y===1?"Liquidation \xB7 1x":`Liquidation \xB7 ${Y}x`},i=Math.min(devicePixelRatio||1,1.75);Hn.setPixelRatio(i),Hn.toneMapping=Ke,Hn.outputColorSpace=re;let t=new Hs;t.background=new Nt(460810),t.fog=new Vs(460810,12,26);let e=new Ee(34,1,.1,60),n=7,s=()=>(n=n*16807%2147483647)/2147483647,r=240,o=new Float32Array(r);for(let Y=0;Y<r;Y++){let st=Y/(r-1),k=-.02*Math.exp(-Math.pow((st-.45)/.05,2)),bt=Math.min(1,Math.max(0,(st-.56)/.44)),Ct=Gi*Math.pow(bt*bt*(3-2*bt),1.15),_t=(Math.sin(st*38)*.011+Math.sin(st*91+1.3)*.006)*bt+(s()-.5)*.006*(.3+bt);o[Y]=k+Ct+_t*(st>.56?1:.35)}o[0]=0,o[r-1]=Gi;for(let Y=1;Y<12;Y++)o[Y]*=Y/12;let a=-7.6,l=6.2,c=-1.95,h=.92,u=Y=>c+Math.asinh(Y*3)*h,f=Y=>a+(l-a)*(Y/(r-1)),m=Y=>1.2-3.4*(Y/(r-1)),g=420,x=(Y,st)=>new ee({uniforms:{uCol:{value:new Nt(Y)},uReveal:{value:1},uTime:{value:0},uW:{value:st}},vertexShader:"varying vec2 vUv; varying vec3 vN; varying vec3 vV; void main(){ vUv=uv; vec4 mv=modelViewMatrix*vec4(position,1.); vN=normalize(normalMatrix*normal); vV=normalize(-mv.xyz); gl_Position=projectionMatrix*mv; }",fragmentShader:`uniform vec3 uCol; uniform float uReveal, uTime; varying vec2 vUv; varying vec3 vN; varying vec3 vV;
       void main(){ if (vUv.x > uReveal) discard;
         float f = pow(1.0 - abs(dot(normalize(vN), normalize(vV))), 1.6);
         float head = smoothstep(uReveal - 0.05, uReveal, vUv.x) * step(uReveal, 0.999);
